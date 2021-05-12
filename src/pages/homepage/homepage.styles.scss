@@ -1,0 +1,27 @@
+.homepage{
+    padding: 2rem;
+
+    display: flex;
+
+
+
+    & .left{
+        width: 100%;
+        margin-right: 4rem;
+    }
+
+    & .right{
+        width: 500px;
+        
+    }
+
+    @media only screen and (max-width: 700px){
+        & {
+            flex-direction: column;
+      }
+      & .right{
+          width: 100%;
+      }
+    }
+ 
+}

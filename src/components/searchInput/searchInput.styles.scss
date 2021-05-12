@@ -1,0 +1,28 @@
+.searchinput{
+    position: relative;
+    max-width: 600px;
+    margin: 2.5rem auto .3rem;
+    padding: 0 2rem;
+
+    & input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        border: 1px solid #2e85ff;
+        padding: 1rem;
+        text-transform: capitalize;
+        border-radius: 5px;
+        color: #555;
+        font-size: 1.5rem !important;
+
+    }
+
+    & svg{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #2e85ff;
+        font-size: 2rem;
+        right: 2.5rem;
+    }
+}

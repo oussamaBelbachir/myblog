@@ -1,0 +1,22 @@
+.button{
+    width: 100%;
+    background-color: #007afc;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    height: 43px !important;
+
+    @media screen and (max-width: 500px) {
+        & {
+          font-size: 1.7rem !important;
+        }
+    }
+
+    & > span{
+      display: block;
+    }
+}

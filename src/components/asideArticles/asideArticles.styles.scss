@@ -1,0 +1,21 @@
+.asideArticles{
+    background-color: rgb(244, 244, 244);
+    border-radius: 3px;
+    padding: 1rem;
+
+    & h2{
+        font-size: 2rem;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #2e85ff;
+        padding-bottom: 1.5rem;
+        color: #2e85ff;
+        padding-top: 1rem;
+    }
+
+    @media only screen and (max-width: 700px){
+        margin-top: 3rem;
+
+    }
+
+}

@@ -1,0 +1,65 @@
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: -27px;
+  font-size: 15px;
+  // color: $main-color;
+  left: 8px;
+  color: #1979ff;
+}
+.groupDiv{
+    position: relative;
+    margin: 3.5rem 0 2.5rem;
+
+    & .pError{
+      color: red;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      margin-top: 1rem;
+    }
+
+    &.error input, &.error textarea{
+      background-color: #ffe3e3;
+    }
+
+    .form-input {
+        background: none;
+        color: $sub-color;
+        font-size: 18px;
+        width: 100%;
+        border: 1px solid $sub-color;
+        border-radius: 5px;
+        padding: 1rem ;
+        background-color: #fff;
+
+        &.disabled{
+          background-color: #eee !important;
+        }
+    
+        &:focus {
+          outline: none;
+        }
+    
+        &:focus ~ .form-input-label {
+          @include shrinkLabel();
+        }
+      }
+
+      .form-input-label {
+        color: $sub-color;
+        font-size: 16px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 15px;
+        top: 12px;
+        transition: 300ms ease all;
+        text-transform: capitalize;
+    
+        &.shrink {
+          @include shrinkLabel();
+        }
+      }
+ 
+}

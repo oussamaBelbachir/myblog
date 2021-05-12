@@ -1,0 +1,31 @@
+.articleItem{
+    max-width: 45rem;
+
+    & img{
+        width: 100%;
+    }
+
+
+    & h3{
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
+
+    & .tags__icon{
+        font-size: 1.8rem;
+        color:  #2e85ff;
+    }
+
+    &__tags{
+        display: flex;
+        align-items: center;
+
+        & span{
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            margin-left: .6rem;
+        }
+
+        
+    }
+}
