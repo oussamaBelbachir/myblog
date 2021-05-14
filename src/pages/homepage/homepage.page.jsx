@@ -15,7 +15,7 @@ const initGa = () =>{
 }
 const logPageView = () => {
     ReactGA.set({page : window.location.pathname});
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
 function HomePage() {
