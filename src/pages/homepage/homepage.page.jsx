@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import './homepage.styles.scss';
 import ArticleItem from '../../components/articleItem/articleItem.component';
 import {data} from '../../data/index';
@@ -6,7 +6,26 @@ import AsideArticles from '../../components/asideArticles/asideArticles.componen
 
 import SearchInput from '../../components/searchInput/searchInput.component';
 
+import ReactGA from 'react-ga';
+
+
+const initGa = () =>{
+    console.log("init GA");
+    ReactGA.initialize("UA-180219995-1");
+}
+const logPageView = () => {
+    ReactGA.set({page : window.location.pathname});
+    ReactGA.pageview(window.location.pathname);
+}
+
 function HomePage() {
+
+    useEffect(() => {
+        initGa();
+        logPageView();
+    })
+
+
     const [search , setSearch] = useState("");
 
      const filteredData = data.filter(item => item.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()));
